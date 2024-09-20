@@ -6,9 +6,16 @@
 <br>
 <h3>Caminho das pastas:</h3>
 <p>FrontEndFeira</p>
-<p>_ public</p>
-<p> __ assets</p>
-
-
-
-    src
+<p>_ app</p>
+<p>__ admin</p>
+<p>__ public</p>
+<p>___ assets</p>
+<p>____ components</p>
+<p>____ css</p>
+<p>_____ NOME_DA_TELA.css</p>
+<p>____ img</p>
+<p>_____ IMAGEM.PNG</p>
+<p>____ js</p>
+<p>_____ NOME_DA_TELA.css</p>
+<p>___ src</p>
+<p>____ NOME_DA_TELA.php</p>

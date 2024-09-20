@@ -6,3 +6,6 @@
 <br>
 <h3>Caminho das pastas:</h3>
 FrontEndFeira
+  public
+    assets
+    src

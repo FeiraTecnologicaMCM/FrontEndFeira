@@ -1,0 +1,35 @@
+/* !CORE PADRÕES! */
+:root{
+    --Branco-cor: #FFF;
+    --Preto-cor: #000;
+    --Vermelho-cor: #E31212;
+    --Cinza-cor: #D9D9D9;
+}
+
+/* !CONFIGURAÇÕES PADRÕES! */
+body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Branco-cor);
+}
+
+h1{
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+h2{
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+p{
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}

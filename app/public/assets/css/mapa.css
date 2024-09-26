@@ -13,7 +13,9 @@ body{
 
 
 .mapaContainer{
+ 
     display: flex;
+  
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -23,11 +25,13 @@ body{
 .mapaH1{
     font-size: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 .btnWrapper{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -35,15 +39,63 @@ body{
 .btnMapa{
     display: flex;
     align-items: center;
-    width: 270px;
-    height: 34px;
+    width: 300px;
+    height: 64px;
     text-align: center;
     justify-content: center;
     margin: 10px;
     background-color: #E31212;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     color: white;
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
 }
+
+.btnMapa:hover{
+    width: 320px;
+    height: 84px;
+    background-color: #E34234;
+    transition: 0.3s;
+}
+
+
+
+
+@media (max-width: 800px) {
+        .mapaContainer{
+            padding-top: 20px;
+        }
+  }
+
+  @media (max-width: 700px) {
+    .mapaContainer{
+        padding-top: 20px;
+    }
+
+    .btnMapa{
+        display: flex;
+        align-items: center;
+        width: 270px;
+        height: 34px;
+        text-align: center;
+        justify-content: center;
+        margin: 10px;
+        background-color: #E31212;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: "League Spartan", sans-serif;
+        font-weight: bold;
+    }
+
+    .btnMapa:hover{
+        width: 290px;
+        height: 44px;
+        background-color: #E34234;
+        transition: 0.3s;
+    }
+    
+}
+
+

@@ -7,7 +7,6 @@
     <title>Mapa</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/mapa.css">
-    
     <?php
             include('../assets/components/head.php')
         ?>
@@ -18,20 +17,18 @@
          ?>
 
          <div class="mapaContainer">
-             <h1 class="mapaH1">MAPEAMENTO DA FEIRA TECNOLÓGICA</h1>
+             <h1 class="mapaH1">Mapeamento da feira tecnológica</h1>
             <div class="btnWrapper">
-                <a class="btnMapa" href="blocoa.php">BLOCO A</a>
-                <a class="btnMapa" href="blocob.php">BLOCO B</a>
-                <a class="btnMapa" href="quadra.php">QUADRA</a>
-                <a class="btnMapa" href="biblioteca.php">BIBLIOTECA</a>
+                <a class="btnMapa" href="">BLOCO A</a>
+                <a class="btnMapa" href="">BLOCO B</a>
+                <a class="btnMapa" href="">QUADRA</a>
+                <a class="btnMapa" href="">BIBLIOTECA</a>
             </div>
          </div>
      
 
-        <?php
-            include('../assets/components/footer.php')
-         ?>
+
      
-       
+    
 </body>
 </html>

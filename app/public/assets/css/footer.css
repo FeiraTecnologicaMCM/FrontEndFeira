@@ -1,0 +1,12 @@
+footer{
+    width: 100vw;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerImg{
+    width: 100%;
+}

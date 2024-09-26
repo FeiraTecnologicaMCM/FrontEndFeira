@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mapaContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mapaH1{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.btnWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnMapa{
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 34px;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: #E31212;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+}

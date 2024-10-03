@@ -6,7 +6,7 @@
 <body>
     <header>
         <div class="logo_etec">
-            <img src="../assets/img/etecmcm.png" alt="Etec MCM logo">
+            <img src="../assets/img/logomcm.png" alt="Etec MCM logo">
         </div>
         <div class="titulo_pagina">
             <h1>FEIRA TECNOLÓGICA 2024</h1>

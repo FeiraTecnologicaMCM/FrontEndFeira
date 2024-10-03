@@ -3,11 +3,12 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #fff;
-    color: #333;
+    color: #333;  
     text-align: center;
   }
   
@@ -21,6 +22,7 @@
   
   main {
     margin-top: 30px;
+    width: 100%;
   }
   
   .evento h1 {
@@ -35,6 +37,7 @@
   
   .projetos {
     margin-top: 40px;
+    margin-bottom: 8%;
   }
   
   .projetos-header {
@@ -46,6 +49,7 @@
   
   .projetos-header h3 {
     font-size: 1.2rem;
+    flex-direction: column;
   }
   
   #verTodos {
@@ -56,8 +60,15 @@
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
+    margin-right: 10%;
   }
   
+  .container-slider{
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+
   .slider-container {
     position: relative;
     max-width: 80%;
@@ -95,5 +106,24 @@
   
   #nextBtn {
     right: 10px;
+  } 
+  
+
+  h3{
+    margin-left: 10%;
+    margin-bottom: 10px;
   }
   
+  .txt-titulo{
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .img-mapa{
+    margin-top: 5%;
+    width: 50%;
+  }
+
+  .ods{
+    margin-top: 10%;
+  }

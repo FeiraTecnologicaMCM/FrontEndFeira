@@ -7,6 +7,8 @@
     <title>Info - Projetos</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/infoprojetos.css">
+    <script src="../assets/js/infoprojetos.js"></script>
+
         <?php
             include('../assets/components/head.php')
         ?>
@@ -19,7 +21,7 @@
             <h1> Projetos da feira tecnológica</h1>
             <h1 class='Quadros'> Quadro n°1 </h1>
 
-            <img class ='fotoinfo'src="../assets/img/fotoinfo.png" alt="">
+            <img class ='fotoinfo'src="../assets/img/img_infoprojetos/fotoinfo.png" alt="">
 
             <h2> Projeto PERR - 3C</h2>
 
@@ -28,9 +30,9 @@
             <h2 class='odsutilizadas'> Ods's Utilizadas</h2>
         
             <div class='Odss'>
-                <img class ='fotods'src="../assets/img/ods1.png" alt="">
-                <img class ='fotods'src="../assets/img/ods2.png" alt="">
-                <img class ='fotods'src="../assets/img/ods3.png" alt="">
+                <img class ='fotods'src="../assets/img/img_infoprojetos/ods1.png" alt="">
+                <img class ='fotods'src="../assets/img/img_infoprojetos/ods2.png" alt="">
+                <img class ='fotods'src="../assets/img/img_infoprojetos/ods3.png" alt="">
             </div>
 
             <h2 class='integrantes'> Integrantes</h2>
@@ -38,11 +40,28 @@
             <p class='txt'> Thales Magno, Memphis Depay, Rogrigo Garro, Cristiano Romero, Luciano Reis</p>
 
             <a class="btnVoto" href="">VOTAR COMO MELHOR PROJETO</a>
-
+            
             <img class ='fotocps'src="../assets/img/logocps.png" alt="">
-         </div>
+         
+        </div>
 
-     
+        <div id="popupOverlay" class="popup-overlay"></div>
+
+        <!-- Pop-up de alerta personalizado -->
+            <div id="popup" class="popup">
+                <h3>ATENÇÃO!</h3>
+                <p>Só é possível escolher 1 projeto como o melhor da feira tecnológica!</p>
+                <p>Deseja confirmar seu voto?</p>
+
+            <div class="popup-buttons">
+                <button class="btn-confirmar" id="btnConfirmar">Confirmar</button>
+                <button class="btn-voltar" id="btnVoltar">Voltar</button>
+            </div>
+            </div>
+        
     
+
+   
+   
 </body>
 </html>

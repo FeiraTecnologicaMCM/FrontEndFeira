@@ -1,4 +1,3 @@
-
 *{
     padding: 0;
     margin: 0;
@@ -7,25 +6,104 @@
 
 body{
     display: flex;
-    flex-direction: column;
+    flex-direction:column; 
     align-items: center;
     justify-content: center;
 }
 
 
-.ProjetosdafeiraContainer{
+.infoContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 25px;
+    margin-bottom: 10px;
 
 }
 
-.ProjetosdafeiraH1{
-    font-size: 20px;
+h1{
+    font-size: 100px;
     padding: 10px;
 }
 
+.Quadros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px; 
+    margin-top: 20px;
+}
 
+.fotoinfo{
+    display: flex;
+    margin: 20px;
+}
 
+h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px; 
+    margin-bottom: 20%;
+}
 
+.txt{
+    width: 80%;
+    margin: 20px;
+    text-align: justify;
+    font-size: 25px;
+
+}
+.odsutilizadas{
+    width: 80%;
+    margin: 20px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.Odss{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    
+}
+
+.fotods{
+    margin: 2%;
+    height: 100%;   
+    width: auto;
+}
+
+.integrantes{
+    width: 80%;
+    margin-top: 75px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.btnVoto{
+    display: flex;
+    font-size: 60%;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: #E31212;
+    border-radius: 100px;
+    text-decoration: none;
+    color: white;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    padding: 2%;
+}
+
+.fotocps{
+    
+}

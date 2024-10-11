@@ -13,14 +13,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "League Spartan", sans-serif;
-    text-decoration: none;
-    color: black;
 }
 
 body{
     display: grid;
-    font-family: Arial, sans-serif;
-
 }
 
 .titulo_pagina{
@@ -70,11 +66,6 @@ ul{
 li{
     list-style: inside;  
     text-transform:unset;
-
-}
-
-img{
-    width: 20%;
 }
 
 

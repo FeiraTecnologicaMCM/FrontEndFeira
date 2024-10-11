@@ -2,7 +2,12 @@ const slider = document.getElementById('slider');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
+const sliderods = document.getElementById('slider-ods');
+const voltaBtn = document.getElementById('voltaBtn');
+const proxBtn = document.getElementById('proxBtn');
+
 let scrollAmount = 0;
+let currentIndex = 0;
 
 nextBtn.addEventListener('click', () => {
   // Limitar a rolagem para não sair do último slide
@@ -20,24 +25,20 @@ prevBtn.addEventListener('click', () => {
   }
 });
 
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+//SECTION ODS´S
 
-document.getElementById('nextBtn').addEventListener('click', function () {
-    currentIndex = (currentIndex + 1) % totalItems;
-    updateCarousel();
+nextBtn.addEventListener('click', () => {
+  // Limitar a rolagem para não sair do último slide
+  if (scrollAmount < (slider.children.length - 1) * 310) {
+    scrollAmount += 310;
+    sliderods.style.transform = `translateX(-${scrollAmount}px)`;
+  }
 });
 
-document.getElementById('prevBtn').addEventListener('click', function () {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    updateCarousel();
+prevBtn.addEventListener('click', () => {
+  // Limitar a rolagem para não voltar além do primeiro slide
+  if (scrollAmount > 0) {
+    scrollAmount -= 310;
+    sliderods.style.transform = `translateX(-${scrollAmount}px)`;
+  }
 });
-
-function updateCarousel() {
-    const newTransform = -currentIndex * 100;
-    document.querySelector('.carousel').style.transform = `translateX(${newTransform}%)`;
-}
-
-
-

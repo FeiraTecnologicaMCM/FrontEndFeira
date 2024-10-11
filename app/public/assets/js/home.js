@@ -20,4 +20,24 @@ prevBtn.addEventListener('click', () => {
   }
 });
 
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+document.getElementById('nextBtn').addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+});
+
+document.getElementById('prevBtn').addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const newTransform = -currentIndex * 100;
+    document.querySelector('.carousel').style.transform = `translateX(${newTransform}%)`;
+}
+
+
 

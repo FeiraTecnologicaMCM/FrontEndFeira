@@ -38,7 +38,7 @@ h1{
 
 .fotoinfo{
     display: flex;
-    margin: auto;
+    margin: 20px;
 }
 
 h2{
@@ -74,7 +74,7 @@ h2{
 }
 
 .fotods{
-    margin: auto;
+    margin: 2%;
     height: 100%;   
     width: auto;
 }
@@ -104,8 +104,6 @@ h2{
     padding: 2%;
 }
 
-.logocps{
-    width: 10%; 
-  
+.fotocps{
+    
 }
-

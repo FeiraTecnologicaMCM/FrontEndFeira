@@ -19,10 +19,10 @@
          <div class="mapaContainer">
              <h1 class="mapaH1">Mapeamento da feira tecnológica</h1>
             <div class="btnWrapper">
-                <a class="btnMapa" href="">BLOCO A</a>
-                <a class="btnMapa" href="">BLOCO B</a>
-                <a class="btnMapa" href="">QUADRA</a>
-                <a class="btnMapa" href="">BIBLIOTECA</a>
+                <a class="btnMapa" href="blocoa.php">BLOCO A</a>
+                <a class="btnMapa" href="blocob.php">BLOCO B</a>
+                <a class="btnMapa" href="quadra.php">QUADRA</a>
+                <a class="btnMapa" href="biblioteca.php">BIBLIOTECA</a>
             </div>
          </div>
      

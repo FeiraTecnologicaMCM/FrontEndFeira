@@ -67,15 +67,30 @@
                                 $response = file_get_contents($url);
                                 $data = json_decode($response, true);
 
-                                if(is_array($data['data'])){   
-                                    foreach ($data['data'] as $projeto){
+                                if (is_array($data['data'])) {
+                                    // Embaralha os projetos para exibi-los de forma aleatória
+                                    shuffle($data['data']);
+
+                                    foreach ($data['data'] as $projeto) {
+                                        $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
+                                        $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
+                                        $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');
+                                        $imagemPath = "../assets/img/$curso.jpeg";
+
+                                        // Verifica se a imagem existe; se não, usa uma imagem padrão
+                                        if (!file_exists($imagemPath)) {
+                                            $imagemPath = "../assets/img/padrao.jpeg";
+                                        }
                                         ?>
-                                            <a href="infoprojetos.php?id=<?php echo($projeto['id_stand']);?>" class="box">
-                                                <img src="../assets/img/<?php echo($projeto['curso']) ?>.jpeg" alt="Imagem 1">
-                                                <span class="name"><?php echo($projeto['nome']) ?></span>
-                                            </a>
+                                        <a href="infoprojetos.php?id=<?php echo $id_stand; ?>" class="box">
+                                            <img src="<?php echo $imagemPath; ?>" alt="Imagem do curso <?php echo $curso; ?>">
+                                            <span class="name"><?php echo $nome; ?></span>
+                                        </a>
                                         <?php
                                     }
+                                } else {
+                                    // Exibe uma mensagem caso nenhum projeto seja encontrado
+                                    echo "<p>Nenhum projeto disponível para o período selecionado.</p>";
                                 }
                             ?>
                         </div> 
@@ -83,20 +98,35 @@
                     <div class="section">
                         <h2>Tarde</h2>
                         <div class="grid">
-                        <?php
+                            <?php
                                 $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/tarde';
                                 $response = file_get_contents($url);
                                 $data = json_decode($response, true);
 
-                                if(is_array($data['data'])){   
-                                    foreach ($data['data'] as $projeto){
+                                if (is_array($data['data'])) {
+                                    // Embaralha os projetos para exibi-los de forma aleatória
+                                    shuffle($data['data']);
+
+                                    foreach ($data['data'] as $projeto) {
+                                        $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
+                                        $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
+                                        $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');
+                                        $imagemPath = "../assets/img/$curso.jpeg";
+
+                                        // Verifica se a imagem existe; se não, usa uma imagem padrão
+                                        if (!file_exists($imagemPath)) {
+                                            $imagemPath = "../assets/img/padrao.jpeg";
+                                        }
                                         ?>
-                                            <a href="infoprojetos.php?id=<?php echo($projeto['id_stand']);?>" class="box">
-                                                <img src="../assets/img/<?php echo($projeto['curso']) ?>.jpeg" alt="Imagem 1">
-                                                <span class="name"><?php echo($projeto['nome']) ?></span>
-                                            </a>
+                                        <a href="infoprojetos.php?id=<?php echo $id_stand; ?>" class="box">
+                                            <img src="<?php echo $imagemPath; ?>" alt="Imagem do curso <?php echo $curso; ?>">
+                                            <span class="name"><?php echo $nome; ?></span>
+                                        </a>
                                         <?php
                                     }
+                                } else {
+                                    // Exibe uma mensagem caso nenhum projeto seja encontrado
+                                    echo "<p>Nenhum projeto disponível para o período selecionado.</p>";
                                 }
                             ?>
                         </div>
@@ -104,20 +134,35 @@
                     <div class="section">
                         <h2>Noite</h2>
                         <div class="grid">
-                        <?php
+                            <?php
                                 $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/noite';
                                 $response = file_get_contents($url);
                                 $data = json_decode($response, true);
 
-                                if(is_array($data['data'])){   
-                                    foreach ($data['data'] as $projeto){
+                                if (is_array($data['data'])) {
+                                    // Embaralha os projetos para exibi-los de forma aleatória
+                                    shuffle($data['data']);
+
+                                    foreach ($data['data'] as $projeto) {
+                                        $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
+                                        $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
+                                        $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');
+                                        $imagemPath = "../assets/img/$curso.jpeg";
+
+                                        // Verifica se a imagem existe; se não, usa uma imagem padrão
+                                        if (!file_exists($imagemPath)) {
+                                            $imagemPath = "../assets/img/padrao.jpeg";
+                                        }
                                         ?>
-                                            <a href="infoprojetos.php?id=<?php echo($projeto['id_stand']);?>" class="box">
-                                                <img src="../assets/img/<?php echo($projeto['curso']) ?>.jpeg" alt="Imagem 1">
-                                                <span class="name"><?php echo($projeto['nome']) ?></span>
-                                            </a>
+                                        <a href="infoprojetos.php?id=<?php echo $id_stand; ?>" class="box">
+                                            <img src="<?php echo $imagemPath; ?>" alt="Imagem do curso <?php echo $curso; ?>">
+                                            <span class="name"><?php echo $nome; ?></span>
+                                        </a>
                                         <?php
                                     }
+                                } else {
+                                    // Exibe uma mensagem caso nenhum projeto seja encontrado
+                                    echo "<p>Nenhum projeto disponível para o período selecionado.</p>";
                                 }
                             ?>
                         </div>

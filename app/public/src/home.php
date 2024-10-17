@@ -15,15 +15,40 @@
     <section class="projetos">
       <div class="projetos-header">
         <h3>Projetos</h3>
-        <button id="verTodosProjetos">Ver todos</button>
+        <a href="projeto.php?filtro=padrao" id="verTodosProjetos">Ver todos</a>
       </div>
       
       <div class='container-slider'>
         <div class="slider-container">
           <div class="slider" id="slider">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
+              <?php
+                $url = 'http://localhost/API-Feira-Tecnologica/projects/get';
+                $response = file_get_contents($url);
+                $data = json_decode($response, true);
+                if (is_array($data['data'])) {
+                    // Embaralha os projetos para exibi-los de forma aleatória
+                    shuffle($data['data']);
+                    foreach ($data['data'] as $projeto) {
+                        $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
+                        $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
+                        $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');
+                        $imagemPath = "../assets/img/$curso.jpeg";
+                        // Verifica se a imagem existe; se não, usa uma imagem padrão
+                        if (!file_exists($imagemPath)) {
+                            $imagemPath = "../assets/img/padrao.jpeg";
+                        }
+                        ?>
+                        <a href="infoprojetos.php?id=<?php echo $id_stand; ?>" class="box slide">
+                            <img src="<?php echo $imagemPath; ?>" alt="Imagem do curso <?php echo $curso; ?>">
+                            <span class="name"><?php echo $nome; ?></span>
+                        </a>
+                        <?php
+                    }
+                } else {
+                    // Exibe uma mensagem caso nenhum projeto seja encontrado
+                    echo "<p>Nenhum projeto disponível para o período selecionado.</p>";
+                }
+              ?>
           </div>
         </div>
         <button class="slider-btn" id="prevBtn">&lt;</button>
@@ -34,14 +59,14 @@
     <section class='mapeamento'>
       <div class="projetos-header">
         <h3>Mapeamento</h3>
-        <button id="verTodosMapa">Ver mapa</button>
+        <a href="mapa.php" id="verTodosMapa">Ver mapa</a>
       </div>
       <img class='img-mapa' src="../assets/img/mapa.png" alt="">
     </section>
     <section class='ods'>
       <div class="projetos-header">
         <h3>ODS's</h3>
-        <button id="verTodosODS">Ver todos</button> <!-- ID atualizado -->
+        <a href="ods.php" id="verTodosODS">Ver todos</a> <!-- ID atualizado -->
       </div>
       <div class='container-ods-slider'>
         <div class="slider-ods-container">
@@ -73,138 +98,76 @@
     </section>
 
     <section>
-      <div class="ranking-container">
-          <h1>Ranking <a href="#" class="ver-ranking">Ver Ranking</a></h1>
-          <p>Acompanhe o ranking das votações dos melhores projetos</p>
-          
-          <div class="ranking">
-              <div class="rank second">
-                  <div class="circle purple">PERR</div>
-                  <div class="position">2°</div>
-                  <div class="project">Projeto PERR</div>
-                  <div class="votes">65 votos</div>
-              </div>
-              <div class="rank first">
-                  <div class="circle orange">PERR</div>
-                  <div class="position">1°</div>
-                  <div class="project">Projeto PERR</div>
-                  <div class="votes">65 votos</div>
-              </div>
-              <div class="rank third">
-                  <div class="circle teal">PERR</div>
-                  <div class="position">3°</div>
-                  <div class="project">Projeto PERR</div>
-                  <div class="votes">65 votos</div>
-              </div>
+      <div class="rank-container">
+          <h1>Ranking Atualizado dos Melhores Projetos</h1>
+          <div class="medalha">
+              <div class="prata">2°</div>
+              <div class="ouro">1°</div>
+              <div class="bronze">3°</div>
           </div>
+          <?php
+              $url = 'http://localhost/API-Feira-Tecnologica/votos/contagem';
+              $response = file_get_contents($url);
+              $data = json_decode($response, true);
 
-          <button>Votar no melhor projeto</button>
-          <style>
-            .container {
-            text-align: center;
-            }
+              $nomesProjetos = []; // Cache para nomes de projetos
 
-            h1 {
-                font-size: 2em;
-                color: #000;
-            }
+              if(is_array($data['data'])) {   
+                  // Variáveis para armazenar cada projeto conforme a posição
+                  $primeiro = $segundo = $terceiro = null;
 
-            h1 a {
-                color: #007bff;
-                text-decoration: none;
-            }
+                  foreach ($data['data'] as $voto) {
+                      $projeto_id = $voto['projeto_id'];
 
-            p {
-                color: #666;
-            }
+                      // Verifica se já temos o nome do projeto no cache
+                      if (!isset($nomesProjetos[$projeto_id])) {
+                          $url = "http://localhost/API-Feira-Tecnologica/projects/getbyid/$projeto_id";
+                          $response = file_get_contents($url);
+                          $projetoData = json_decode($response, true);
 
-            .ranking {
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                margin: 20px 0;
-            }
+                          if (is_array($projetoData['data'])) {
+                              foreach ($projetoData['data'] as $projeto) {
+                                  $nomesProjetos[$projeto_id] = $projeto['nome']; // Armazena no cache
+                              }
+                          }
+                      }
 
-            .rank {
-                width: 150px;
-                margin: 0 10px;
-                text-align: center;
-                background-color: #002060;
-                color: #fff;
-                padding: 10px;
-                border-radius: 10px;
-                position: relative;
-            }
+                      // Armazena o projeto na variável correspondente com base na posição
+                      switch ($voto['posicao']) {
+                          case 1:
+                              $primeiro = ['nome' => $nomesProjetos[$projeto_id] ?? 'Nome não encontrado', 'votos' => $voto['total_votos']];
+                              break;
+                          case 2:
+                              $segundo = ['nome' => $nomesProjetos[$projeto_id] ?? 'Nome não encontrado', 'votos' => $voto['total_votos']];
+                              break;
+                          case 3:
+                              $terceiro = ['nome' => $nomesProjetos[$projeto_id] ?? 'Nome não encontrado', 'votos' => $voto['total_votos']];
+                              break;
+                      }
 
-            .rank .circle {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #fc1f1f;
-                font-weight: bold;
-                margin: 0 auto 10px;
-            }
+                      // Interrompe o loop após obter os três primeiros lugares
+                      if ($voto['posicao'] >= 3) {
+                          break;
+                      }
+                  }
 
-            .rank.first .circle {
-                background-color: #f39c12;
-                height: 50px
-            }
-
-            .rank.second .circle {
-                background-color: #afb1b3;
-                height: 50px
-            }
-
-            .rank.third .circle {
-                background-color: #9c5b3d;
-                height: 50px
-            }
-
-            .rank.first{
-              height: 250px
-            }
-
-            .rank.second{
-              height: 200px
-            }
-
-            .rank.third{
-              height: 150px
-            }
-
-            .rank .position {
-                font-size: 1.5em;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
-
-            .rank .project {
-                font-size: 1.2em;
-                margin-bottom: 5px;
-            }
-
-            .rank .votes {
-                font-size: 1em;
-            }
-
-            button {
-                background-color: #ff0000;
-                color: #fff;
-                border: none;
-                padding: 10px 20px;
-                font-size: 1em;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            button:hover {
-                background-color: #cc0000;
-            }
-          </style>
-
+                  // Exibe os dados nos elementos de div conforme a posição
+                  ?>
+                  <div class="caixas">
+                      <div class="box1">
+                          <div class="boxprata"></div>
+                          <div><?php echo $segundo['nome'] ?? 'Projeto não encontrado'; ?><br><?php echo $segundo['votos'] ?? '0'; ?> votos</div>
+                      </div>
+                      <div class="box2">
+                          <div><?php echo $primeiro['nome'] ?? 'Projeto não encontrado'; ?><br><?php echo $primeiro['votos'] ?? '0'; ?> votos</div>
+                      </div>
+                      <div class="box3">
+                          <div><?php echo $terceiro['nome'] ?? 'Projeto não encontrado'; ?><br><?php echo $terceiro['votos'] ?? '0'; ?> votos</div>
+                      </div>
+                  </div>
+                  <?php
+              }
+          ?>
       </div>
     </section>
 

@@ -1,3 +1,14 @@
+/* !CORE PADRÕES! */
+:root {
+  --Branco-cor: #FFF;
+  --Preto-cor: #000;
+  --Vermelho-cor: #E31212;
+  --Cinza-cor: #D9D9D9;
+  --Azul-escuro: #062261;
+  --Amarelo: #FFC107;
+  --Prata: #C0C0C0;
+  --Bronze: #CD7F32;
+}
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +51,12 @@ main {
 .projetos-header h3 {
   font-size: 1.2rem;
 }
-
+.ods{
+  margin: 40px 0 40px 0;
+}
+.ranking-container{
+  margin-bottom: 40px;
+}
 #verTodosProjetos,
 #verTodosODS,
 #verTodosMapa {
@@ -77,17 +93,23 @@ main {
 
 .slide,
 .slide-ods {
-  min-width: 300px;
+  min-width: 100px;
   height: auto;
   margin: 10px;
 }
+.slide-ods img{
+  width: 100px;
+}
 
 .slide {
-  min-width: 300px;
-  height: 150px;
+  display: flex;
+  min-width: 130px;
+  padding: 10px;
+  gap: 10px;
   background-color: #f1f1f1;
   border-radius: 10px;
   margin: 10px;
+  flex-direction: column;
 }
 
 .slider-btn,
@@ -126,4 +148,166 @@ main {
 h3 {
   margin-left: 10%;
   margin-bottom: 10px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.banner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner img{
+  width: 80%;
+}
+h1 {
+  font-size: 2em;
+    color: #000;
+}
+h1 a {
+    color: #007bff;
+    text-decoration: none;
+}
+p {
+    color: #666;
+}
+
+button, .votar_projeto {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #cc0000;
+}
+
+
+
+.rank-container {
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.rank-container h1 {
+  text-align: center;
+  width: 350px;
+  margin-top: 3%;
+}
+
+.caixas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.box1, .box2, .box3 {
+  background: var(--Azul-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--Branco-cor);
+  text-align: center;
+  position: relative;
+}
+
+.box1 {
+  width: 100px;
+  height: 130px;
+}
+
+.box2 {
+  width: 100px;
+  height: 150px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+}
+/* Estilo para círculos das colocações */
+.medalha {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: -50px; /* Move os círculos para sobre as caixas */
+  z-index: 2;
+}
+
+.medalha div {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--Azul-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.medalha .ouro {
+  background-color: var(--Amarelo);
+}
+
+.medalha .prata {
+  background-color: var(--Prata);
+}
+
+.medalha .bronze {
+  background-color: var(--Bronze);
+}
+
+.ranking {
+  background-color: #001f54;
+  border-radius: 15px;
+  padding: 2%;
+  width: 90%;
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #022d74;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.alternate {
+  background-color: #003a99;
+}
+
+.position {
+  width: 20%;
+  text-align: left;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  color: var(--Preto-cor);
+}
+
+.votes {
+  width: 30%;
+  text-align: right;
 }

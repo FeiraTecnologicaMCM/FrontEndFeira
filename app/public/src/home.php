@@ -15,7 +15,7 @@
     <section class="projetos">
       <div class="projetos-header">
         <h3>Projetos</h3>
-        <button id="verTodos">Ver todos</button>
+        <button id="verTodosProjetos">Ver todos</button>
       </div>
       
       <div class='container-slider'>
@@ -34,14 +34,14 @@
     <section class='mapeamento'>
       <div class="projetos-header">
         <h3>Mapeamento</h3>
-        <button id="verTodos">Ver mapa</button>
+        <button id="verTodosMapa">Ver mapa</button>
       </div>
       <img class='img-mapa' src="../assets/img/mapa.png" alt="">
     </section>
     <section class='ods'>
       <div class="projetos-header">
         <h3>ODS's</h3>
-        <button id="verTodos">Ver todos</button>
+        <button id="verTodosODS">Ver todos</button> <!-- ID atualizado -->
       </div>
       <div class='container-ods-slider'>
         <div class="slider-ods-container">
@@ -54,6 +54,16 @@
             <div class="slide-ods"><img src="../assets/img/ods/6.png" alt=""></div>
             <div class="slide-ods"><img src="../assets/img/ods/7.png" alt=""></div>
             <div class="slide-ods"><img src="../assets/img/ods/8.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/9.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/10.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/11.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/12.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/13.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/14.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/15.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/16.png" alt=""></div>
+            <div class="slide-ods"><img src="../assets/img/ods/17.png" alt=""></div>
+
           </div>
         </div>
       

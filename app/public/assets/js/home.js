@@ -2,43 +2,40 @@ const slider = document.getElementById('slider');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-const sliderods = document.getElementById('slider-ods');
+const sliderods = document.getElementById('sliderods');
 const voltaBtn = document.getElementById('voltaBtn');
 const proxBtn = document.getElementById('proxBtn');
 
-let scrollAmount = 0;
-let currentIndex = 0;
+// Variáveis de rolagem independentes
+let scrollAmountProjects = 0;
+let scrollAmountODS = 0;
 
+// Slider dos projetos
 nextBtn.addEventListener('click', () => {
-  // Limitar a rolagem para não sair do último slide
-  if (scrollAmount < (slider.children.length - 1) * 310) {
-    scrollAmount += 310;
-    slider.style.transform = `translateX(-${scrollAmount}px)`;
+  if (scrollAmountProjects < (slider.children.length - 1) * 310) {
+    scrollAmountProjects += 310;
+    slider.style.transform = `translateX(-${scrollAmountProjects}px)`;
   }
 });
 
 prevBtn.addEventListener('click', () => {
-  // Limitar a rolagem para não voltar além do primeiro slide
-  if (scrollAmount > 0) {
-    scrollAmount -= 310;
-    slider.style.transform = `translateX(-${scrollAmount}px)`;
+  if (scrollAmountProjects > 0) {
+    scrollAmountProjects -= 310;
+    slider.style.transform = `translateX(-${scrollAmountProjects}px)`;
   }
 });
 
-//SECTION ODS´S
-
-nextBtn.addEventListener('click', () => {
-  // Limitar a rolagem para não sair do último slide
-  if (scrollAmount < (slider.children.length - 1) * 310) {
-    scrollAmount += 310;
-    sliderods.style.transform = `translateX(-${scrollAmount}px)`;
+// Slider das ODS's
+proxBtn.addEventListener('click', () => {
+  if (scrollAmountODS < (sliderods.children.length - 1) * 310) {
+    scrollAmountODS += 310;
+    sliderods.style.transform = `translateX(-${scrollAmountODS}px)`;
   }
 });
 
-prevBtn.addEventListener('click', () => {
-  // Limitar a rolagem para não voltar além do primeiro slide
-  if (scrollAmount > 0) {
-    scrollAmount -= 310;
-    sliderods.style.transform = `translateX(-${scrollAmount}px)`;
+voltaBtn.addEventListener('click', () => {
+  if (scrollAmountODS > 0) {
+    scrollAmountODS -= 310;
+    sliderods.style.transform = `translateX(-${scrollAmountODS}px)`;
   }
 });

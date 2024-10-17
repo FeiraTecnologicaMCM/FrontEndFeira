@@ -20,6 +20,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- !FAVICON! -->
-    <link rel="shortcut icon" alt="logo" href="../assets/img/etecmcm.png" type="image/x-icon">
+    <link rel="shortcut icon" alt="logo" href="../assets/img/logomcm.png" type="image/x-icon">
 
 </head>

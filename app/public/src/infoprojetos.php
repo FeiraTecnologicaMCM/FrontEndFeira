@@ -90,16 +90,23 @@
             if(is_array($data['data'])){   
                 foreach ($data['data'] as $projeto){
                     ?>
-                    <h1 class='Quadros'><?php echo($projeto['local']) ?></h1>
                         <h2><?php echo($projeto['nome']) ?> - <?php echo($projeto['turma']) ?></h2>
-                        <p class='txt'><?php echo($projeto['descricao']) ?></p>
-                        <h2 class='odsutilizadas'>Ods Utilizada</h2>
-                        <div class='Odss'>
-                            <img class='fotods' src="../assets/img/ods/<?php echo($projeto['ods']) ?>.png" alt="">
+                        <h1 class='Quadros'>Local: <?php echo($projeto['local']) ?></h1>
+                        <div class="container_itens">
+                            <h2 class='integrantes'>Descricao</h2>
+                            <p class='txt'><?php echo($projeto['descricao']) ?></p>
                         </div>
-                        <h2 class='integrantes'>Integrantes</h2>
-                        <p class='txt'><?php echo($projeto['integrantes']) ?></p>
-
+                        <div class="container_itens">
+                            <h2 class='odsutilizadas'>Ods Utilizada</h2>
+                            <div class='Odss'>
+                                <img class='fotods' src="../assets/img/ods/<?php echo($projeto['ods']) ?>.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="container_itens">
+                            <h2 class='integrantes'>Integrantes</h2>
+                            <p class='txt'><?php echo($projeto['integrantes']) ?></p>
+                        </div>
                         <!-- Botão de votação -->
                         <a class="btnVoto">VOTAR COMO MELHOR PROJETO</a>
 
@@ -107,21 +114,24 @@
                     </div>
 
                     <!-- Modal de Confirmação -->
-                    <div id="voteModal" class="modal">
+                    <form id="voteModal" class="modal" method="POST">
                         <div class="modal-content">
                             <h2>ATENÇÃO!</h2>
-                            <p>Só é possível escolher <strong>1 projeto</strong> como o melhor da feira tecnológica!<br> Deseja confirmar seu voto?</p>
-                            <button class="btn-confirm">Confirmar</button>
+                            <p>Só é possível escolher <strong>1 projeto</strong> como o melhor da feira tecnológica!</p>
+                            <input type="text" name="projeto_id" id="projeto_id" value="<?php echo($id); ?>">
+                            <input type="number" name="telefone" id="telfone">
+                            <p> Deseja confirmar seu voto?</p>
+                            <a class="btn-confirm" href="confirma_voto.php" type="submit">Confirmar</a>
                             <button class="btn-cancel">Voltar</button>
                         </div>
-                    </div>
+                    </form>
 
                     <?php
                 }
             }
         ?>
         
-
+    </div>
     <script>
         // Abertura do Modal ao clicar no botão de votação
         document.querySelector(".btnVoto").addEventListener("click", function(event) {
@@ -136,9 +146,8 @@
 
         // Fechar o modal ao confirmar (você pode adicionar a lógica de votação aqui)
         document.querySelector(".btn-confirm").addEventListener("click", function() {
-            alert("Voto confirmado!"); // Mensagem temporária de confirmação
             document.getElementById("voteModal").style.display = "none"; // Fecha o modal após confirmar
-        });
+        })
     </script>
 </body>
 </html>

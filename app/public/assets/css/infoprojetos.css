@@ -18,8 +18,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    margin-bottom: 10px;
-
+    gap: 20px;
 }
 
 h1{
@@ -32,13 +31,11 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 15px; 
-    margin-top: 20px;
+    font-size: 0.8em; 
 }
 
 .fotoinfo{
     display: flex;
-    margin: auto;
 }
 
 h2{
@@ -47,19 +44,15 @@ h2{
     align-items: center;
     justify-content: center;
     font-size: 25px; 
-    margin-bottom: 20%;
 }
 
 .txt{
     width: 80%;
-    margin: 20px;
     text-align: justify;
-    font-size: 25px;
+    font-size: 0.8em;
 
 }
 .odsutilizadas{
-    width: 80%;
-    margin: 20px;
     text-align: justify;
     font-size: 25px;
 }
@@ -72,17 +65,20 @@ h2{
     height: 100px;
     
 }
-
+.container_itens{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 .fotods{
-    margin: auto;
     height: 100%;   
     width: auto;
 }
 
 .integrantes{
-    width: 80%;
-    margin-top: 75px;
-    text-align: justify;
     font-size: 25px;
 }
 
@@ -94,7 +90,6 @@ h2{
     height: 50px;
     text-align: center;
     justify-content: center;
-    margin: 10px;
     background-color: #E31212;
     border-radius: 100px;
     text-decoration: none;

@@ -12,7 +12,7 @@
             <h1>FEIRA TECNOLÓGICA 2024</h1>
             <h2>ETEC Maria Cristina Medeiros</h2>
         </div>
-        <a href="home.php" class="btn_voltar"><i class="fa-solid fa-chevron-left"></i></a>
+        <a href="javascript:history.back()" class="btn_voltar"><i class="fa-solid fa-chevron-left"></i></a>
     </header>
 </body>
 </html>

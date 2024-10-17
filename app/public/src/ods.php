@@ -38,7 +38,7 @@
     }
 
     .header h2 {
-      font-size: 20px;
+      font-size: 18px;
       color: red;
       margin: 0;
     }
@@ -118,7 +118,7 @@
       }
 
       .ods-section .icon {
-        width: 90px;
+        width: 70px;
         margin-right: 10px;
       }
 
@@ -151,109 +151,109 @@
       <p>Os Objetivos de Desenvolvimento Sustentável (ODS) (ou Objetivos Mundiais para o Desenvolvimento Sustentável) são uma coleção de 17 metas globais, estabelecidas pela Assembleia Geral das Nações Unidas. Os ODS são parte da Resolução 70/1 da Assembleia Geral das Nações Unidas: "Transformando o nosso mundo: a Agenda 2030 para o Desenvolvimento Sustentável". As metas são amplas e interdependentes, mas cada uma tem uma lista separada de metas a serem alcançadas. Atingir todos os 169 alvos indicaria a realização de todos os 17 objetivos. Os ODS abrangem questões de desenvolvimento social e econômico, incluindo pobreza, fome, saúde, educação, aquecimento global, igualdade de gênero, água, saneamento, energia, urbanização, meio ambiente e justiça social.</p>
 
       <div class="ods-icons">
-        <img src="../assets/img/odss.jpg" alt="ODS">
+        <img src="../assets/img/ods/odss.jpg" alt="ODS">
       </div>
 
       <div class="ods-section">
         <h4>1. Erradicar a pobreza</h4>
-        <img class="icon" src="../assets/img/ods/1.png" alt="ODS 1">
-        <p>Acabar com a pobreza em todas as suas formas, em todos os lugares.</p>
+        <img class="icon" src="../assets/img/ods/ODS1.jpg" alt="ODS 1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>2. Fome zero e agricultura sustentável</h4>
-        <img class="icon" src="../assets/img/ods/2.png" alt="ODS 2">
-        <p>Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável.</p>
+        <img class="icon" src="../assets/img/ods/ods2.png" alt="ODS 2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>3. Saúde e bem estar</h4>
-        <img class="icon" src="../assets/img/ods/3.png" alt="ODS 3">
-        <p>Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
+        <img class="icon" src="../assets/img/ods/ods3.png" alt="ODS 3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>4. Educação de Qualidade</h4>
-        <img class="icon" src="../assets/img/ods/4.png" alt="ODS 4">
-        <p>Assegurar a educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.</p>
+        <img class="icon" src="../assets/img/ods/ods4.png" alt="ODS 4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>5. Igualdade de Gênero</h4>
-        <img class="icon" src="../assets/img/ods/5.png" alt="ODS 5">
-        <p> Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas.</p>
+        <img class="icon" src="../assets/img/ods/ods5.png" alt="ODS 5">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4> 6. Água Potável e Saneamento </h4>
-        <img class="icon" src="../assets/img/ods/6.png" alt="ODS 6">
-        <p> Garantir disponibilidade e manejo sustentável da água e saneamento para todos.</p>
+        <img class="icon" src="../assets/img/ods/ods6.png" alt="ODS 6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>7. Energia Limpa e Acessível </h4>
-        <img class="icon" src="../assets/img/ods/7.png" alt="ODS 7">
-        <p>Garantir acesso à energia barata, confiável, sustentável e renovável para todos.</p>
+        <img class="icon" src="../assets/img/ods/ods7.png" alt="ODS 7">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>8. Trabalho Decente e Crescimento Econômico  </h4>
-        <img class="icon" src="../assets/img/ods/8.png" alt="ODS 8">
-        <p>Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos.</p>
+        <img class="icon" src="../assets/img/ods/ods8.png" alt="ODS 8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>9. Indústria, Inovação e Infraestrutura </h4>
-        <img class="icon" src="../assets/img/ods/9.png" alt="ODS 9">
-        <p>Construir infraestrutura resiliente, promover a industrialização inclusiva e sustentável, e fomentar a inovação.</p>
+        <img class="icon" src="../assets/img/ods/ods9.png" alt="ODS 9">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>10. Redução das Desigualdades</h4>
-        <img class="icon" src="../assets/img/ods/10.png" alt="ODS 10">
-        <p>Reduzir as desigualdades dentro dos países e entre eles.</p>
+        <img class="icon" src="../assets/img/ods/ods10.png" alt="ODS 10">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>11. Cidades e Comunidades Sustentávei</h4>
-        <img class="icon" src="../assets/img/ods/11.png" alt="ODS 11">
-        <p>Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
+        <img class="icon" src="../assets/img/ods/ods11.png" alt="ODS 11">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>12. Consumo e Produção Responsáveis</h4>
-        <img class="icon" src="../assets/img/ods/12.png" alt="ODS 12">
-        <p>Assegurar padrões de produção e de consumo sustentáveis.</p>
+        <img class="icon" src="../assets/img/ods/ods12.png" alt="ODS 12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>13. Ação Contra a Mudança Global do Clima</h4>
-        <img class="icon" src="../assets/img/ods/13.png" alt="ODS 13">
-        <p> Tomar medidas urgentes para combater a mudança climática e seus impactos.</p>
+        <img class="icon" src="../assets/img/ods/ods13.png" alt="ODS 13">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>14. Vida na Água</h4>
-        <img class="icon" src="../assets/img/ods/14.png" alt="ODS 14">
-        <p>Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável.</p>
+        <img class="icon" src="../assets/img/ods/ods14.png" alt="ODS 14">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>15. Vida Terrestre</h4>
-        <img class="icon" src="../assets/img/ods/15.png" alt="ODS 15">
-        <p>Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da Terra e deter a perda da biodiversidade.</p>
+        <img class="icon" src="../assets/img/ods/ods15.png" alt="ODS 15">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>16. Paz Justiça e instituições eficazes</h4>
-        <img class="icon" src="../assets/img/ods/16.png" alt="ODS 16">
-        <p>Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis.</p>
+        <img class="icon" src="../assets/img/ods/ods16.png" alt="ODS 16">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
       <div class="ods-section">
         <h4>17. Parcerias e Meios de Implementação</h4>
-        <img class="icon" src="../assets/img/ods/17.png" alt="ODS 17">
-        <p> Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.</p>
+        <img class="icon" src="../assets/img/ods/ods17.png" alt="ODS 17">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
 
 

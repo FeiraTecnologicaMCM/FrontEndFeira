@@ -38,7 +38,7 @@ h1{
 
 .fotoinfo{
     display: flex;
-    margin: auto;
+    margin: 20px;
 }
 
 h2{
@@ -74,7 +74,7 @@ h2{
 }
 
 .fotods{
-    margin: auto;
+    margin: 2%;
     height: 100%;   
     width: auto;
 }
@@ -102,9 +102,8 @@ h2{
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
     padding: 2%;
-    transition: all 4s;
 }
 
-.logocps{
-    width: 10%; 
+.fotocps{
+    
 }

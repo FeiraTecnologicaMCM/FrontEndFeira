@@ -42,3 +42,10 @@ prevBtn.addEventListener('click', () => {
     sliderods.style.transform = `translateX(-${scrollAmount}px)`;
   }
 });
+
+// script.js
+
+
+
+
+

@@ -1,175 +1,129 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;  
-    text-align: center;
-  }
-  
-  header {
-    padding: 20px;
-  }
-  
-  .logo img {
-    width: 120px;
-  }
-  
-  main {
-    margin-top: 30px;
-    width: 100%;
-  }
-  
-  .evento h1 {
-    font-size: 2rem;
-    color: #000;
-  }
-  
-  .evento h2 {
-    font-size: 1.5rem;
-    color: #d32f2f;
-  }
-  
-  .projetos {
-    margin-top: 40px;
-    margin-bottom: 8%;
-  }
-  
-  .projetos-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .projetos-header h3 {
-    font-size: 1.2rem;
-    flex-direction: column;
-  }
-  
-  #verTodos {
-    background-color: #d32f2f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 10%;
-  }
-  
-  .container-slider{
-    display: flex;
-    width: 100%;
-    position: relative;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;  
+  text-align: center;
+}
 
-  .slider-container {
-    position: relative;
-    max-width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-  }
-  
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    min-width: 300px;
-    height: 150px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    margin: 0 10px;
-  }
-  
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  #prevBtn {
-    left: 10px;
-  }
-  
-  #nextBtn {
-    right: 10px;
-  } 
-  
+header {
+  padding: 20px;
+}
 
-  h3{
-    margin-left: 10%;
-    margin-bottom: 10px;
-  }
-  
-  .txt-titulo{
-    flex-direction: column;
-    text-align: left;
-  }
+.logo img {
+  width: 120px;
+}
 
-  .img-mapa{
-    margin-top: 5%;
-    width: 50%;
-  }
-/* SECTION ODS´S */
+main {
+  margin-top: 30px;
+  width: 100%;
+}
 
-  .ods{
-    margin-top: 10%;
-  }
+.projetos {
+  margin-top: 40px;
+  margin-bottom: 8%;
+}
 
-  .container-ods-slider{
-    display: flex;
-    width: 100%;
-    position: relative;
-  }
+.projetos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
 
-  .slider-ods-container {
-    position: relative;
-    max-width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-  }
-  
-  .slider-ods {
-    flex-direction: row;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide-ods {
-    min-width: 300px;
-    height: 150px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    margin: 0 10px;
-  }
-  
-  .slider-ods-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  #voltaBtn {
-    left: 10px;
-  }
-  
-  #proxBtn {
-    right: 10px;
-  } 
+.projetos-header h3 {
+  font-size: 1.2rem;
+}
+
+#verTodosProjetos,
+#verTodosODS,
+#verTodosMapa {
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10%;
+}
+
+.container-slider,
+.container-ods-slider {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.slider-container,
+.slider-ods-container {
+  position: relative;
+  max-width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider,
+.slider-ods {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide,
+.slide-ods {
+  min-width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
+.slide {
+  min-width: 300px;
+  height: 150px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.slider-btn,
+.slider-ods-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+#voltaBtn {
+  left: 10px;
+}
+
+#proxBtn {
+  right: 10px;
+}
+
+.img-mapa {
+  margin-top: 5%;
+  width: 50%;
+}
+
+h3 {
+  margin-left: 10%;
+  margin-bottom: 10px;
+}

@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-
-    <title>Votação</title>
+</head>
+<body>
+    <header>
+    </header>
 
     <style>
         /* !CORE PADRÕES! */
@@ -30,6 +32,7 @@
             --Prata: #C0C0C0;
             --Bronze: #CD7F32;
         }
+
         .topo {
             display: flex;
             align-items: center;
@@ -74,7 +77,7 @@
         .rank-container h1 {
             text-align: center;
             width: 350px;
-            margin-top: 1%;
+            margin-top: 3%;
         }
 
         .caixas {
@@ -112,50 +115,13 @@
             height: 100px;
         }
 
-        .podio{
-            display: flex;
-            align-items: center;
-            z-index: 2;
-        }
-
-        .caixa1 {
-            width: 100px;
-            height: 40px;   
-            background: linear-gradient(to left,#929292, #E1E1E1, #929292 );
-
-            display: grid;
-            place-items: center;
-
-            margin-bottom: -40%;
-        }
-    
-        .caixa2{
-            width: 100px;
-            height: 40px;   
-            background: linear-gradient(to left, #D39F25, #FFDE24, #D39F25);
-
-            display: grid;
-            place-items: center;
-
-            margin-bottom: -30%;
-        }
-    
-        .caixa3{
-            width: 100px;
-            height: 40px;   
-            background: linear-gradient(to left, #9E6629, #FFC66D, #9E6629);
-            margin-bottom: -45%;
-
-            display: grid;
-            place-items: center;
-        }
-
+        /* Estilo para círculos das colocações */
         .medalha {
             display: flex;
-        }
-
-        .medalha div:not(:last-child) {
-            margin-right: 50px;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: -50px; /* Move os círculos para sobre as caixas */
+            z-index: 2;
         }
 
         .medalha div {
@@ -171,27 +137,15 @@
         }
 
         .medalha .ouro {
-            background: #F78024;
-            position: absolute;
-            margin-bottom: -190px;
-            margin-top: 36px;
-            margin-left: -30px
+            background-color: var(--Amarelo);
         }
 
         .medalha .prata {
-            background-color: #9531E1;
-            position: absolute;
-            margin-bottom: -190px;
-            margin-top: 50px;
-            right: 51%;
+            background-color: var(--Prata);
         }
 
         .medalha .bronze {
-            background-color: #2BBEB2;
-            position: absolute;
-            margin-bottom: -70%;
-            margin-top: 60px;
-            right: calc(43% + 7px);
+            background-color: var(--Bronze);
         }
 
         .ranking {
@@ -253,7 +207,7 @@
 
         footer {
             text-align: center;
-            bottom: 0;
+            margin-top: 30px;
         }
 
         footer img {
@@ -302,9 +256,11 @@
             }
         }
 
+        /* Estilos para telas ainda menores (até 480px) */
         @media (max-width: 480px) {
             .box1, .box2, .box3 {
                 width: 70px;
+                height: auto;
             }
 
             .topo {
@@ -321,16 +277,11 @@
             }
         }
     </style>
-</head>
-<body>
-    <header>
-    </header>
 
+    <!-- !AQUI VAI O CONTEÚDO DA SUA PÁGINA! -->
     <div class="container">
         <div class="topo">
-            <a href="mapa.php">
-                <i class="fa-solid fa-chevron-left"></i>
-            </a>
+            <i class="fa-solid fa-chevron-left"></i>
             <img src="../assets/img/logomcm.png" alt="Logo MCM" class="logo">
         </div>
         <div class="text">
@@ -346,21 +297,6 @@
             <div class="ouro">PEER</div>
             <div class="bronze">PEER</div>
         </div>
-
-        <img src="public/assets/img/trofeu.png" alt="" class="trofeu">
-
-        <div class="podio">
-            <div class="caixa1">
-                2°
-            </div>
-            <div class="caixa2">
-                1°
-            </div>
-            <div class="caixa3">
-                3°
-            </div>
-        </div>
-
     
         <div class="caixas">
             <div class="box1">
@@ -414,9 +350,7 @@
         </div> 
     </div>
 
-    <a href="projeto.php">
-        <button class="ver-projetos">Ver Projetos</button>
-    </a>
+    <button class="ver-projetos">Ver Mais Projetos</button>
 
     <footer>
         <img src="../assets/img/cps.png" alt="Logo MCM">

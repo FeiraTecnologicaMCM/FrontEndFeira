@@ -31,7 +31,7 @@
     <div id="filter-modal" class="filter-modal">
         <h4>Curso</h4>
         <div class="filter-options cursos">
-            <button class="filter-option">Administração</button>
+            <a class="filter-option">Administração</a>
             <button class="filter-option">Logística</button>
             <button class="filter-option">Recursos Humanos</button>
             <button class="filter-option">Informática</button>
@@ -53,32 +53,17 @@
         </div>
     </div>
 
-    <div class="section" id="padrao">
+    <div class="section">
         <h2>Manhã</h2>
         <div class="grid">
-            <?php
-                $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/manha';
-                $response = file_get_contents($url);
-                $data = json_decode($response, true);
-
-                if(is_array($data['data'])){   
-                    foreach ($data['data'] as $projeto){
-                        ?>
-                            <a href="infoprojetos.php?id=<?php echo($projeto['id_stand']);?>" class="box">
-                                <img src="../assets/img/<?php echo($projeto['curso']) ?>.jpeg" alt="Imagem 1">
-                                <span class="name"><?php echo($projeto['nome']) ?></span>
-                            </a>
-                        <?php
-                    }
-                }
-            ?>
-        </div> 
+            <div class="box">
+                <img src="../assets/img/<?php echo($projeto['curso']) ?>.png" alt="Imagem 1">
+                <span class="name"><?php echo($projeto['nome']) ?></span>
+            </div>
+        </div>
     </div>
-
-    <div class="section" id="padrao">
-        <h2>Tarde</h2>
-        <div class="grid">
-        <?php
+    
+            <?php
                 $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/tarde';
                 $response = file_get_contents($url);
                 $data = json_decode($response, true);
@@ -86,38 +71,12 @@
                 if(is_array($data['data'])){   
                     foreach ($data['data'] as $projeto){
                         ?>
-                            <a href="infoprojetos.php?id=<?php echo($projeto['id_stand']);?>" class="box">
-                                <img src="../assets/img/<?php echo($projeto['curso']) ?>.jpeg" alt="Imagem 1">
-                                <span class="name"><?php echo($projeto['nome']) ?></span>
-                            </a>
+                            
                         <?php
                     }
                 }
             ?>
-        </div>
-    </div>
 
-    <div class="section">
-        <h2>Noite</h2>
-        <div class="grid">
-        <?php
-                $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/noite';
-                $response = file_get_contents($url);
-                $data = json_decode($response, true);
-
-                if(is_array($data['data'])){   
-                    foreach ($data['data'] as $projeto){
-                        ?>
-                            <a href="infoprojetos.php?id=<?php echo($projeto['id_stand']);?>" class="box">
-                                <img src="../assets/img/<?php echo($projeto['curso']) ?>.jpeg" alt="Imagem 1">
-                                <span class="name"><?php echo($projeto['nome']) ?></span>
-                            </a>
-                        <?php
-                    }
-                }
-            ?>
-        </div>
-    </div>
     <script src="../assets/js/projeto.js"></script>
 </body>
 </html>

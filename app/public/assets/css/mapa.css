@@ -47,3 +47,28 @@ body{
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
 }
+
+.imgWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapaimgblocoA{
+    margin-top: 300px;
+    width: 230%;
+    transform: rotate(90deg);
+    margin-right: 20px;
+}
+
+.mapaimgblocoB{
+    margin-top: 300px;
+    width: 275%;
+    transform: rotate(90deg);
+}
+
+.mapaimg{
+   
+    width: 200%;
+    
+}

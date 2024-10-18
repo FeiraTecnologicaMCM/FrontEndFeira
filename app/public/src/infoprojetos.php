@@ -1,3 +1,56 @@
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $projeto_id = $_POST['projeto_id'];
+        $telefone = $_POST['telefone'];
+        
+        $data = array("projeto_id" => $projeto_id , "telefone" => $telefone);
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'localhost/api-feira-tecnologica/votos/registrar',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => json_encode($data),
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+        ),
+        ));
+
+        $response = curl_exec($curl);
+        $response = json_decode($response, true);
+        curl_close($curl);
+        
+
+        if ($response['code'] == 400) {
+            echo "<p>Telefone não existente.</p>";
+        }elseif($response['code'] == 403){
+            echo "<p>Erro ao votar (telefone já usado).</p>";
+            ?>
+                <script>
+                    const spanNome = document.getElementById('span_telefone');
+
+                    spanNome.classList.add('active');
+                </script>
+            <?php
+
+        } else { ?>
+            <script>
+                // Exibe o alerta
+                alert('Voto registrado!');
+
+                // Após o usuário clicar em "OK", redireciona para outra página
+                window.location.href = 'projeto.php'; // Altere para a página de destino
+            </script>
+        <?php    
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -117,11 +170,13 @@
                     <form id="voteModal" class="modal" method="POST">
                         <div class="modal-content">
                             <h2>ATENÇÃO!</h2>
-                            <p>Só é possível escolher <strong>1 projeto</strong> como o melhor da feira tecnológica!</p>
-                            <input type="text" name="projeto_id" id="projeto_id" value="<?php echo($id); ?>">
+                            <p>Só é possível escolher <strong>1 projeto</strong> por telefone como o melhor da feira tecnológica!</p>
+                            <input type="text" name="projeto_id" id="projeto_id" class="projeto_id" value="<?php echo($id); ?>">
+                            <span>Digite o seu telefone</span>
+                            <span id="span_telefone">TELEFONE JÁ CADASTRADO</span>
                             <input type="number" name="telefone" id="telfone">
                             <p> Deseja confirmar seu voto?</p>
-                            <a class="btn-confirm" href="confirma_voto.php" type="submit">Confirmar</a>
+                            <button class="btn-confirm" type="submit">Confirmar</button>
                             <button class="btn-cancel">Voltar</button>
                         </div>
                     </form>
@@ -144,10 +199,6 @@
             document.getElementById("voteModal").style.display = "none"; // Fecha o modal
         });
 
-        // Fechar o modal ao confirmar (você pode adicionar a lógica de votação aqui)
-        document.querySelector(".btn-confirm").addEventListener("click", function() {
-            document.getElementById("voteModal").style.display = "none"; // Fecha o modal após confirmar
-        })
     </script>
 </body>
 </html>

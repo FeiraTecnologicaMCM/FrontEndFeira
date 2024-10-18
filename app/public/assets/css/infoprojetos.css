@@ -103,3 +103,13 @@ h2{
 .logocps{
     width: 10%; 
 }
+
+.projeto_id{
+    display: none;
+}
+#telfone{
+    margin-bottom: 10px;
+}
+#span_telefone{
+    display: none;
+}

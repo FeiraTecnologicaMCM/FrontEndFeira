@@ -34,15 +34,6 @@
             <a href="projeto.php?filtro=contabilidade" class="filter-option">Contabilidade</a>
             <a href="projeto.php?filtro=quimica" class="filter-option">Química</a>
         </div>
-        <h4>Série</h4>
-        <div class="filter-options series">
-            <a href="projeto.php?filtro=1" class="filter-option">1º ano</a>
-            <a href="projeto.php?filtro=2" class="filter-option">2º ano</a>
-            <a href="projeto.php?filtro=3" class="filter-option">3º ano</a>
-            <a href="projeto.php?filtro=ADM" class="filter-option">1º módulo</a>
-            <a href="projeto.php?filtro=ADM" class="filter-option">2º módulo</a>
-            <a href="projeto.php?filtro=ADM" class="filter-option">3º módulo</a>
-        </div>
         <h4>Periodo</h4>
         <div class="filter-options series">
             <a href="projeto.php?filtro=padrao" class="filter-option">Todos</a>
@@ -54,7 +45,7 @@
 
     <?php
 
-        $filtro = $_GET['filtro'];
+        $filtro = $_GET['filtro'] ?? 'padrao';
 
         switch($filtro){
             case "padrao":
@@ -71,7 +62,10 @@
                                     // Embaralha os projetos para exibi-los de forma aleatória
                                     shuffle($data['data']);
 
-                                    foreach ($data['data'] as $projeto) {
+                                    // Limita a exibição a no máximo 6 projetos
+                                    $projetosParaExibir = array_slice($data['data'], 0, 6);
+
+                                    foreach ($projetosParaExibir as $projeto) {
                                         $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
                                         $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
                                         $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');
@@ -98,7 +92,7 @@
                     <div class="section">
                         <h2>Tarde</h2>
                         <div class="grid">
-                            <?php
+                        <?php
                                 $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/tarde';
                                 $response = file_get_contents($url);
                                 $data = json_decode($response, true);
@@ -107,7 +101,10 @@
                                     // Embaralha os projetos para exibi-los de forma aleatória
                                     shuffle($data['data']);
 
-                                    foreach ($data['data'] as $projeto) {
+                                    // Limita a exibição a no máximo 6 projetos
+                                    $projetosParaExibir = array_slice($data['data'], 0, 6);
+
+                                    foreach ($projetosParaExibir as $projeto) {
                                         $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
                                         $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
                                         $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');
@@ -134,7 +131,7 @@
                     <div class="section">
                         <h2>Noite</h2>
                         <div class="grid">
-                            <?php
+                        <?php
                                 $url = 'http://localhost/API-Feira-Tecnologica/projects/getbyperiodo/noite';
                                 $response = file_get_contents($url);
                                 $data = json_decode($response, true);
@@ -143,7 +140,10 @@
                                     // Embaralha os projetos para exibi-los de forma aleatória
                                     shuffle($data['data']);
 
-                                    foreach ($data['data'] as $projeto) {
+                                    // Limita a exibição a no máximo 6 projetos
+                                    $projetosParaExibir = array_slice($data['data'], 0, 6);
+
+                                    foreach ($projetosParaExibir as $projeto) {
                                         $curso = htmlspecialchars($projeto['curso'], ENT_QUOTES, 'UTF-8');
                                         $nome = htmlspecialchars($projeto['nome'], ENT_QUOTES, 'UTF-8');
                                         $id_stand = htmlspecialchars($projeto['id_stand'], ENT_QUOTES, 'UTF-8');

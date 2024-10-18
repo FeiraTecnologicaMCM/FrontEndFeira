@@ -171,18 +171,7 @@
       </div>
     </section>
 
-    <section>
-      <div class="container">
-          <h1>Vestibulinho ETEC MCM</h1>
-          <p>Inscreva-se no vestibulinho da ETEC MCM</p>
-
-          <div class="banner">
-              <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/22/2023/10/INSCRICAO.png" alt="Banner do Vestibulinho 1º Semestre 2024">
-          </div>
-
-          <button id="verTodos">Inscreva-se</button>
-      </div>
-    </section>
+    
   </main>
 
   <script src="../assets/js/home.js"></script>

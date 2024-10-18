@@ -19,7 +19,7 @@
          <div class="mapaContainer">
              <h1 class="mapaH1">BIBLIOTECA</h1>
             <div class="imgWrapper">
-                <img src="" alt="">
+                <img class="mapaimg" src="../assets/img/mapa/biblioteca.png" alt="">
             </div>
          </div>
      

@@ -61,7 +61,7 @@
         <h3>Mapeamento</h3>
         <a href="mapa.php" id="verTodosMapa">Ver mapa</a>
       </div>
-      <img class='img-mapa' src="../assets/img/mapa.png" alt="">
+      <img class='img-mapa' src="../assets/img/mapa/mapa.png" alt="">
     </section>
     <section class='ods'>
       <div class="projetos-header">

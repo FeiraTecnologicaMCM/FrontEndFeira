@@ -18,8 +18,9 @@
 
          <div class="mapaContainer">
              <h1 class="mapaH1">BLOCO B</h1>
+             <h2>Vire a tela horizontalmente para ver o mapa</h2>
             <div class="imgWrapper">
-                <img src="" alt="">
+                <img class="mapaimgblocoB"  src="../assets/img/mapa/blocob.png" alt="">
             </div>
          </div>
      

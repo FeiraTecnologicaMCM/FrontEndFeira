@@ -198,6 +198,7 @@ button:hover {
   place-items: center;
   gap: 30px;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .rank-container h1 {
